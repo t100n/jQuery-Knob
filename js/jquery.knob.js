@@ -143,13 +143,13 @@
                 this.i.each(function(k) {
                     var $this = $(this);
                     s.i[k] = $this;
-                    s.v[k] = s.o.parse($this.val());
+                    s.v[k] = s.o.parse($this.val()||$this.data('value')); // Added support for all elements, just add data-value to it
 
                     $this.bind(
                         'change blur'
                         , function () {
                             var val = {};
-                            val[k] = $this.val();
+                            val[k] = $this.val()||$this.data('value');
                             s.val(val);
                         }
                     );
@@ -160,13 +160,13 @@
 
                 // input = integer
                 this.i = this.$;
-                this.v = this.o.parse(this.$.val());
+                this.v = this.o.parse(this.$.val()||this.$.data('value'));
                 (this.v === '') && (this.v = this.o.min);
 
                 this.$.bind(
                     'change blur'
                     , function () {
-                        s.val(s._validate(s.o.parse(s.$.val())));
+                        s.val(s._validate(s.o.parse(s.$.val()||s.$.data('value'))));
                     }
                 );
 

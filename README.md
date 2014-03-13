@@ -23,6 +23,8 @@ Options are provided as attributes 'data-option':
 
     <input type="text" class="dial" data-min="-50" data-max="50">
 
+If you want to use another element as a knob you must passa data-value instead of value.
+
 ... or in the "knob()" call :
 
     $(".dial").knob({
