@@ -108,7 +108,7 @@
                     inputColor: this.$.data('inputcolor'),
                     font: this.$.data('font') || 'Arial',
                     fontWeight: this.$.data('font-weight') || 'bold',
-                    inline : false,
+                    display : this.$.data('display') || 'block',
                     step : this.$.data('step') || 1,
                     rotation: this.$.data('rotation'),
 
@@ -183,8 +183,9 @@
             // wraps all elements in a div
             // add to DOM before Canvas init is triggered
             this.$div = $('<div style="'
-                + (this.o.inline ? 'display:inline;' : '')
-                + 'width:' + this.o.width + 'px;height:' + this.o.height + 'px;'
+                + 'display:'+this.o.display+';'
+                + 'margin:auto;'
+		+ 'width:' + this.o.width + 'px;height:' + this.o.height + 'px;'
                 + '"></div>');
 
             this.$.wrap(this.$div).before(this.$c);
@@ -506,7 +507,7 @@
                     bgColor : this.$.data('bgcolor') || '#EEEEEE',
                     angleOffset : this.$.data('angleoffset') || 0,
                     angleArc : this.$.data('anglearc') || 360,
-                    inline : true
+                    display : 'block'
                 }, this.o
             );
         };
