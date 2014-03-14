@@ -6,7 +6,12 @@ jQuery Knob
 - downward compatible ; overloads an input element.
 
 Data values:
-* display - Value for the display of the element: inline, block, etc. Defaults to block.
+* width - Width of the containing element for the Knob
+* height - Height of the containing element for the Knob
+* min - Minimum possible value for the Knob
+* max - Maximum possible value for the Knob
+* value - Current value for the Knob
+* display - Value for the display of the element: inline, block, etc. Defaults to block
 
 Example
 -------
