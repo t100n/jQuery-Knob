@@ -5,6 +5,9 @@ jQuery Knob
 - touch, mouse and mousewheel, keyboard events implemented.
 - downward compatible ; overloads an input element.
 
+Data values:
+* display - Value for the display of the element: inline, block, etc. Defaults to block.
+
 Example
 -------
 
