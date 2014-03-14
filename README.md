@@ -10,7 +10,7 @@ Data values:
 * height - Height of the containing element for the Knob
 * min - Minimum possible value for the Knob
 * max - Maximum possible value for the Knob
-* value - Current value for the Knob
+* value - Current value for the Knob in elements that are not an INPUT. Example: <img class="dial" src="https://s3-us-west-2.amazonaws.com/youbeq/thumb_t100n.jpg" data-display="block" data-width="100" data-height="100" data-value="6" data-min="0" data-max="10">
 * display - Value for the display of the element: inline, block, etc. Defaults to block
 
 Example
@@ -27,13 +27,14 @@ Example
 Options
 -------
 
-Options are provided as attributes 'data-option':
+Options are provided as attributes 'data-<OPTION>', Where <option> can be replaced by any of the attributes supported.
 
-    <input type="text" class="dial" data-min="-50" data-max="50">
+Input example:
+    <input type="text" class="dial" data-min="-50" data-max="50" value="6">
 
-If you want to use another element as a knob you must passa data-value instead of value.
+Any element can be used as a knob, but you must pass a data-value for the current value to be used when drawing the Knob.
 
-... or in the "knob()" call :
+You can also pass attributes in the "knob()" call. Example:
 
     $(".dial").knob({
                     'min':-50
