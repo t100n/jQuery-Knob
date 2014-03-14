@@ -185,7 +185,7 @@
             this.$div = $('<div style="'
                 + 'display:'+this.o.display+';'
                 + 'margin:auto;'
-		+ 'width:' + this.o.width + 'px;height:' + this.o.height + 'px;'
+                + 'width:' + this.o.width + 'px;height:' + this.o.height + 'px;'
                 + '"></div>');
 
             this.$.wrap(this.$div).before(this.$c);
@@ -694,17 +694,12 @@
 
             this.o.displayInput
                 && this.i.css({
-                //'width' : ((this.w / 2 + 4) >> 0) + 'px'
-                //,'height' : ((this.w / 2 + 4) >> 0) + 'px'
-                'width' : (this.w-this.lineWidth*2 - 0.1) + 'px'
-                ,'height' : (this.w-this.lineWidth*2 - 0.1) + 'px'
-                //,'height' : ((this.w / 3) >> 0) + 'px'
+                'width' : (this.w-this.lineWidth*2) + 'px'
+                ,'height' : (this.w-this.lineWidth*2) + 'px'
                 ,'position' : 'absolute'
                 ,'vertical-align' : 'middle'
                 ,'margin-top' : this.lineWidth + 'px'
-                //,'margin-top' : ((this.w / 3) >> 0) + 'px'
                 ,'margin-left' : '-' + (this.w-this.lineWidth) + 'px'
-                //,'margin-left' : '-' + ((this.w * 3 / 4 + 2) >> 0) + 'px'
                 ,'border' : 0
                 ,'background' : 'transparent'
                 ,'font' : this.o.fontWeight + ' ' + ((this.w / s) >> 0) + 'px ' + this.o.font
