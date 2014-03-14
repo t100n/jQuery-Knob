@@ -694,7 +694,8 @@
             this.o.displayInput
                 && this.i.css({
                         'width' : ((this.w / 2 + 4) >> 0) + 'px'
-                        ,'height' : ((this.w / 3) >> 0) + 'px'
+                        ,'height' : ((this.w / 2 + 4) >> 0) + 'px'
+                        //,'height' : ((this.w / 3) >> 0) + 'px'
                         ,'position' : 'absolute'
                         ,'vertical-align' : 'middle'
                         ,'margin-top' : ((this.w / 3) >> 0) + 'px'
